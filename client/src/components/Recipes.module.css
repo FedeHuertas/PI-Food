@@ -1,0 +1,19 @@
+.recipesContainer {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.options {
+    background-color: rgb(253, 137, 137);
+    max-width: 550px;
+    margin: auto;
+    padding: 5px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.container {
+    padding-bottom: 25px;
+}

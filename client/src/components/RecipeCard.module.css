@@ -1,0 +1,28 @@
+.text {
+    color: rgb(13, 0, 172);
+    font-family: 'Segoe Script';
+    max-width: 400px;
+    margin-left: 80px;
+    text-align: left;
+}
+
+.container {
+    background-image: url('../images/paper.webp');
+    background-size: cover;
+    width: 400px;
+    height: 520px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-top: 50px;
+    box-shadow:10px 10px 30px rgba(0, 0, 0, 0.4);
+    transform:rotate(-1deg);
+}
+
+.polaroid {
+    background-color: whitesmoke;
+    padding:10px 10px 50px 10px;
+    border:1px solid #BFBFBF;
+    box-shadow:10px 10px 30px rgba(0, 0, 0, 0.2);
+    transform:rotate(-10deg);
+    max-width: 200px;
+}

@@ -1,0 +1,14 @@
+[
+    {"name": "Gluten Free", "value": "gluten free"},
+    {"name": "Ketogenic", "value": "ketogenic"},
+    {"name": "Vegetarian", "value": "vegetarian"},
+    {"name": "Lacto-Vegetarian", "value": "lacto"},
+    {"name": "Ovo-Vegetarian", "value": "ovo"},
+    {"name": "Vegan", "value": "vegan"},
+    {"name": "Pescetarian", "value": "pescatarian"},
+    {"name": "Paleo", "value": "paleolithic"},
+    {"name": "Primal", "value": "primal"},
+    {"name": "Low FODMAP", "value": "fodmap friendly"},
+    {"name": "Whole30", "value": "whole 30"},
+    {"name": "Dairy Free", "value": "dairy free"}
+]

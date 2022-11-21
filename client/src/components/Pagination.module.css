@@ -1,0 +1,9 @@
+.container {
+    display: inline ;
+}
+
+.selected {
+    background-color: rgb(253, 137, 137);
+    border: 1px solid brown;
+}
+
