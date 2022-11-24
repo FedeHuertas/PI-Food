@@ -1,0 +1,74 @@
+.container {
+    background-image: url('../images/paper.webp');
+    width: 600px;
+    margin: auto;
+    margin-bottom: 150px;
+    margin-top: 150px;
+    padding-bottom: 20px;
+    padding-left: 180px;
+    padding-top: 150px;
+    background-repeat: repeat-y;
+    text-align: left;
+    color: rgb(13, 0, 172);
+    font-family: 'Segoe Script';
+}
+
+.input{
+    font-size: larger;
+    color: rgb(13, 0, 172);
+}
+
+.filtersContainer {
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 550px;
+    font-size: larger;
+}
+
+.danger {
+    border: 2px double red;
+    display: inline;
+    font-size: larger;
+}
+
+.dangerText {
+    color: red;
+    font-size: smaller;
+    background-color: whitesmoke;
+    display: inline;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.buttons {
+    width: 70px;
+    height: 50px;
+    background-color: whitesmoke;
+    border: 2px solid darkblue;
+    color: darkblue;
+    border-radius: 5px;
+    box-shadow: 5px 5px darkblue;
+}
+
+.buttons:hover {
+    background-color: darkblue;
+    color: whitesmoke;
+    box-shadow: 5px 5px gray;
+}
+
+.buttonsDisabled {
+    width: 70px;
+    height: 50px;
+    background-color: grey;
+    border: 2px solid darkslategrey;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 5px 5px darkslategrey;
+}

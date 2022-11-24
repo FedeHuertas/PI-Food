@@ -1,0 +1,19 @@
+.text {
+    color: whitesmoke;
+    font-size: 60px;
+    text-shadow: 10px 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.startButton {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgb(253, 137, 137);;
+    font-size: large;
+}
+
+.startButton:hover {
+    background-color: red;
+    color: whitesmoke;
+    font-size: large;
+}
