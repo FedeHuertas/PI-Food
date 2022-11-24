@@ -76,7 +76,7 @@ const CreateRecipe = () => {
         e.preventDefault();
         let aux = {...recipe,
             diets: diet}
-        axios.post('/recipes', recipe)
+        axios.post('/recipes', aux)
         .then(res => history.push(`/recipeDetail/${res.data.id}`))
         .catch(error => console.error('Error:', error))
     };
