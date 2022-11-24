@@ -76,13 +76,7 @@ const CreateRecipe = () => {
         e.preventDefault();
         let aux = {...recipe,
             diets: diet}
-        axios('/recipes', {
-            method: 'POST',
-            body: JSON.stringify(aux),
-            headers:{
-              'Content-Type': 'application/json'
-            }
-        })
+        axios.post('/recipes', recipe)
         .then(res => history.push(`/recipeDetail/${res.data.id}`))
         .catch(error => console.error('Error:', error))
     };

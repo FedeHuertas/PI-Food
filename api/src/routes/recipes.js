@@ -81,7 +81,7 @@ router.get('/:id', async (req, res) => {
 });
 
 router.post('/', async (req, res) => {
-    const { title, summary, healthScore, steps, diets, image } = req.body;
+    const { title, summary, healthScore, steps, diets, image } = req.body.recipe;
 
     if (title && summary) {
         try {
