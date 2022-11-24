@@ -8,7 +8,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import axios from 'axios'
 
-axios.defaults.baseURL = 'http://localhost:3001'
+axios.defaults.baseURL = import.meta.env.MODE === 'production' ? 'https://pi-food-production-cd82.up.railway.app/' : 'http://localhost:3001'
 
 ReactDOM.render(
   <React.StrictMode>
