@@ -85,24 +85,24 @@ const CreateRecipe = () => {
 
     return (
         <div className={s.container} >
-        <form name="RecipeForm" onSubmit={handleCreateRecipe}>
+        <form name="RecipeForm" onSubmit={handleCreateRecipe} >
 
             <h2>Crear Recetas</h2>
 
             <h3>Titulo: </h3>
-            <input name="title" size="90" onChange={handleInputChange} className={errors.title && s.danger } />
+            <input name="title" size="50" onChange={handleInputChange} className={errors.title ? s.danger : s.input } /><br/>
             {errors.title && <span className={s.dangerText}>❗{errors.title}</span>}<br/>
 
-            <h3>Resumen: </h3><br/>
-            <textarea rows="4" cols="100" name="summary" onChange={handleInputChange} className={errors.summary && s.danger } />
+            <h3>Resumen: </h3>
+            <textarea rows="4" cols="50" name="summary" onChange={handleInputChange} className={errors.summary ? s.danger : s.input } /><br/>
             {errors.summary && <span className={s.dangerText}>❗{errors.summary}</span>}<br/>
 
             <h3>Puntos de Salud: </h3>
-            <input type="float" name="healthScore" size="2" onChange={handleInputChange} placeholder={"%"} className={errors.healthScore && s.danger } />
+            <input type="float" name="healthScore" size="2" onChange={handleInputChange} placeholder={"%"} className={errors.healthScore ? s.danger : s.input} />
             {errors.healthScore && <span className={s.dangerText}>❗{errors.healthScore}</span>}<br/>
 
             <h3>Imagen: </h3>
-            <input size="90" name="image" onChange={handleInputChange} placeholder="ingrese una url" /><br/>
+            <input size="30" name="image" className={s.input} onChange={handleInputChange} placeholder="ingrese una url" /><br/>
 
             <h4>Tipos de dieta: </h4>
             <div className={s.filtersContainer} >
@@ -117,13 +117,13 @@ const CreateRecipe = () => {
             <h3>Pasos: </h3>
 
             <h4>{recipe.steps.length+1}° Paso: </h4>
-            <textarea rows="4" cols="100" type="text" name="step" onChange={handleStepChange} value={step.step} /><br/>
+            <textarea rows="4" cols="50" type="text" name="step" className={s.input} onChange={handleStepChange} value={step.step} /><br/>
 
             <h4>Ingredientes: </h4>
-            <input size="90" name="ingredients" onChange={handleStepChange} value={step.ingredients} /><br/>
+            <input size="50" name="ingredients" className={s.input} onChange={handleStepChange} value={step.ingredients} /><br/>
 
             <h4>Equipo Necesario: </h4>
-            <input size="90" name="equipment" onChange={handleStepChange} value={step.equipment} /><br/>
+            <input size="50" name="equipment" className={s.input} onChange={handleStepChange} value={step.equipment} /><br/>
             
             <div className={s.buttonContainer} >
                 <button className={s.buttons} onClick={handleAddStep}>Agregar Paso</button>

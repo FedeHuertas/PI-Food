@@ -3,14 +3,15 @@
     background-size: contain;
     background-repeat: repeat-y;
     display: inline-block;
-    width: 800px;
+    width: 600px;
     margin-top: 5%;
     margin-bottom: 5%;
     padding-top: 50px;
-    padding-left: 50px;
+    padding-left: 120px;
+    padding-right: 30px;
     color: rgb(13, 0, 172);
     font-family: 'Segoe Script';
-    font-size: larger;
+    font-size: large;
 }
 
 .summary {
@@ -20,7 +21,7 @@
 
 .steps {
     text-align: left;
-    padding-left: 90px;
+    padding-left: 20px;
 }
 
 .polaroid {

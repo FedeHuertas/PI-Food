@@ -1,6 +1,6 @@
 .container {
     background-image: url('../images/paper.webp');
-    width: 800px;
+    width: 600px;
     margin: auto;
     margin-bottom: 150px;
     margin-top: 150px;
@@ -11,6 +11,11 @@
     text-align: left;
     color: rgb(13, 0, 172);
     font-family: 'Segoe Script';
+}
+
+.input{
+    font-size: larger;
+    color: rgb(13, 0, 172);
 }
 
 .filtersContainer {
@@ -25,6 +30,7 @@
 .danger {
     border: 2px double red;
     display: inline;
+    font-size: larger;
 }
 
 .dangerText {

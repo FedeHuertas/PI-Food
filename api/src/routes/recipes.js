@@ -13,15 +13,15 @@ const apiKey = process.env.API_KEY_2
 router.get('/', async (req, res) => {
     const search = req.query.search;
     const diets =  req.query.diets;
-    //const resApi = hardCodeApi.results;
-    const resApi = [];
+    const resApi = hardCodeApi.results;
+    //const resApi = [];
     let resDB = [];
 
-    await axios(`https://api.spoonacular.com/recipes/complexSearch?number=${apiResultsNumber}&addRecipeInformation=true&apiKey=${apiKey}`)
+/*     await axios(`https://api.spoonacular.com/recipes/complexSearch?number=${apiResultsNumber}&addRecipeInformation=true&apiKey=${apiKey}`)
     .then(r => {
         r.data.results.map(r => resApi.push(r));
     })
-    .catch(err => res.status(500).send(err))
+    .catch(err => res.status(500).send(err)) */
 
     resDB = await Recipe.findAll({
         include: Diet,

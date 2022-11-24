@@ -3,6 +3,7 @@
     margin: auto;
     flex-wrap: wrap;
     justify-content: space-around;
+    max-width: 900px;
 }
 
 .options {
