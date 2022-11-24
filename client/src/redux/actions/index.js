@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 // ACTIONS TYPES
 export const GET_RECIPES = "GET_RECIPES";
 export const CREATE_RECIPE = "CREATE_RECIPE";
@@ -9,9 +11,8 @@ export const SET_FILTERED_RECIPES = "SET_FILTERED_RECIPES"
 // ACTIONS CREATORS
 export const getRecipes = (search, diets) => dispatch => {
     search = search ? search : "";
-    return fetch(`http://localhost:3001/recipes?search=${search}`)
-    .then(r => r.json())
-    .then(r => dispatch({type: GET_RECIPES, payload: r}))
+    return axios(`/recipes?search=${search}`)
+    .then(r => dispatch({type: GET_RECIPES, payload: r.data}))
 }
 
 export const setFilteredRecipes = (filteredRecipes) => dispatch => {
@@ -19,13 +20,11 @@ export const setFilteredRecipes = (filteredRecipes) => dispatch => {
 }
 
 export const getRecipe = (id) => dispatch => {
-    return fetch(`http://localhost:3001/recipes/${id}`)
-    .then(r => r.json())
-    .then(r => dispatch({type: GET_RECIPE, payload: r}))
+    return axios(`/recipes/${id}`)
+    .then(r => dispatch({type: GET_RECIPE, payload: r.data}))
 } 
 
 export const getDiets = () => dispatch => {
-    return fetch('http://localhost:3001/diets')
-    .then(r => r.json())
-    .then(r => dispatch({type: GET_DIETS, payload: r}))
+    return axios('/diets')
+    .then(r => dispatch({type: GET_DIETS, payload: r.data}))
 }
