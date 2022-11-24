@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 import RecipeStep from "./RecipeStep";
 import { getDiets } from "../redux/actions";
 import s from './CreateRecipe.module.css'
+import axios from 'axios';
 
 const CreateRecipe = () => {
 
@@ -75,15 +76,15 @@ const CreateRecipe = () => {
         e.preventDefault();
         let aux = {...recipe,
             diets: diet}
-        fetch('http://localhost:3001/recipes', {
+        axios('/recipes', {
             method: 'POST',
             body: JSON.stringify(aux),
             headers:{
               'Content-Type': 'application/json'
             }
-        }).then(res => res.json())
-            .catch(error => console.error('Error:', error))
-            .then(response => history.push(`/recipeDetail/${response.id}`));
+        })
+        .then(res => history.push(`/recipeDetail/${res.data.id}`))
+        .catch(error => console.error('Error:', error))
     };
 
     useEffect(() => dispatch(getDiets()), []);
