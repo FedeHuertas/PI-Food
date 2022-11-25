@@ -10,7 +10,8 @@
     background-repeat: repeat-y;
     text-align: left;
     color: darkblue;
-    font-family: 'Segoe Script';
+    font-family: 'Caveat';
+    font-size: larger;
 }
 
 .input{

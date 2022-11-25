@@ -1,9 +1,10 @@
 .text {
     color: rgb(13, 0, 172);
-    font-family: 'Segoe Script';
+    font-family: 'Caveat';
     max-width: 400px;
     margin-left: 80px;
     text-align: left;
+    font-size: larger;
 }
 
 .container {
