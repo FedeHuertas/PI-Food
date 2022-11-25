@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import './index.css';
 import store from './redux/store';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import axios from 'axios'
+import axios from 'axios';
 
 axios.defaults.baseURL = 'https://pi-food-production-cd82.up.railway.app/'
 
