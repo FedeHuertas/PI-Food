@@ -79,7 +79,6 @@ const SearchBar = () => {
                 )}
             </div>
         </form>
-        <Recipes/>
         </div>
     )
 };

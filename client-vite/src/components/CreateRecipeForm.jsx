@@ -3,10 +3,10 @@ import { useSelector, useDispatch } from 'react-redux';
 //import { useHistory } from "react-router-dom";
 import RecipeStep from "./RecipeStep";
 import { getDiets } from "../redux/actions";
-import s from './CreateRecipe.module.css'
+import s from './CreateRecipeForm.module.css'
 import axios from 'axios';
 
-const CreateRecipe = () => {
+const CreateRecipeForm = () => {
 
     const diets = useSelector(state => state.diets);
     const dispatch = useDispatch();
@@ -164,4 +164,4 @@ export const validate = (recipe) => {
     return errors;
 }
 
-export default CreateRecipe;
+export default CreateRecipeForm;
