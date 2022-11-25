@@ -87,15 +87,15 @@ const CreateRecipeForm = () => {
             <h2>Crear Recetas</h2>
 
             <h3>Titulo: </h3>
-            <input name="title" size="50" onChange={handleInputChange} className={errors.title ? s.danger : s.input } /><br/>
+            <input name="title" size="50" onChange={handleInputChange} className={s.input } /><br/>
             {errors.title && <span className={s.dangerText}>❗{errors.title}</span>}<br/>
 
             <h3>Resumen: </h3>
-            <textarea rows="4" cols="50" name="summary" onChange={handleInputChange} className={errors.summary ? s.danger : s.input } /><br/>
+            <textarea rows="4" cols="50" name="summary" onChange={handleInputChange} className={ s.input } /><br/>
             {errors.summary && <span className={s.dangerText}>❗{errors.summary}</span>}<br/>
 
             <h3>Puntos de Salud: </h3>
-            <input type="float" name="healthScore" size="2" onChange={handleInputChange} placeholder={"%"} className={errors.healthScore ? s.danger : s.input} />
+            <input type="float" name="healthScore" size="2" onChange={handleInputChange} placeholder={"%"} className={ s.input} />
             {errors.healthScore && <span className={s.dangerText}>❗{errors.healthScore}</span>}<br/>
 
             <h3>Imagen: </h3>

@@ -1,15 +1,14 @@
 .filtersContainer {
-    display: flex;
-    margin: auto;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    text-align: initial;
     max-width: 550px;
     font-size: larger;
+    margin-left: 25px;
 }
 
 .container {
     background-color: rgba(245, 245, 245, 0.9);
-    height: 250px;
     max-width: 550px;
     margin: auto;
     padding: 5px;
@@ -18,5 +17,9 @@
 @media (max-width: 520px) {
     .container {
         max-width: 380px;
+    }
+
+    .filtersContainer {
+        grid-template-columns: repeat(2,1fr);
     }
 }

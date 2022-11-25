@@ -16,6 +16,13 @@
 .input{
     font-size: larger;
     color: rgb(13, 0, 172);
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    border-bottom: solid 3px;
+    border-right: solid 2px;
+    border-color: blue;
 }
 
 .filtersContainer {
@@ -27,11 +34,11 @@
     font-size: larger;
 }
 
-.danger {
+/* .danger {
     border: 2px double red;
     display: inline;
     font-size: larger;
-}
+} */
 
 .dangerText {
     color: red;
