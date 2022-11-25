@@ -6,7 +6,7 @@ const CreateRecipe = () => {
     return (
         <>
             <Nav/>
-            <CreateRecipe/>
+            <CreateRecipeForm/>
         </>
     )
 };
