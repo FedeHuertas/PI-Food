@@ -1,16 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { useSelector, useDispatch } from 'react-redux';
-//import { useHistory } from "react-router-dom";
+import React, { useState } from "react";
+import { useSelector } from 'react-redux';
+import { useNavigate } from "react-router-dom";
 import RecipeStep from "./RecipeStep";
-import { getDiets } from "../redux/actions";
 import s from './CreateRecipeForm.module.css'
 import axios from 'axios';
 
 const CreateRecipeForm = () => {
 
     const diets = useSelector(state => state.diets);
-    const dispatch = useDispatch();
-    //const history = useHistory();
+    const navigate = useNavigate();
 
     const [recipe, setRecipe] = useState({
         title: "",
@@ -77,12 +75,11 @@ const CreateRecipeForm = () => {
         let aux = {...recipe,
             diets: diet}
         axios.post('/recipes', aux)
-        .then(res => history.push(`/recipeDetail/${res.data.id}`))
+        .then(res => navigate(`/recipeDetail/${res.data.id}`))
         .catch(error => console.error('Error:', error))
     };
 
-    useEffect(() => dispatch(getDiets()), []);
-
+    
     return (
         <div className={s.container} >
         <form name="RecipeForm" onSubmit={handleCreateRecipe} >

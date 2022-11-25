@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getRecipe } from '../redux/actions';
+import { getRecipe, GET_RECIPE } from '../redux/actions';
 import RecipeStep from "./RecipeStep";
 import s from './RecipeDetail.module.css'
 import notFoundImg from '../images/sad-food.jpg'
 import { useLocation } from 'react-router-dom';
+import axios from 'axios';
 
 const RecipeDetail = (props) => {
 
@@ -13,8 +14,11 @@ const RecipeDetail = (props) => {
     const recipeData = useSelector(state => state.recipe);
 
     const { pathname } = useLocation();
+    const id = pathname.split('/').pop();
 
-    useEffect(() => dispatch(getRecipe(pathname.split('/').pop())), []);
+    useEffect(() => {
+        dispatch(getRecipe(id))
+    }, []);
 
     const steps = recipeData.hasOwnProperty("analyzedInstructions") && recipeData.analyzedInstructions.length ? recipeData.analyzedInstructions[0].steps : recipeData.steps || [];
 
