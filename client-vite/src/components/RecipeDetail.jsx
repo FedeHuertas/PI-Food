@@ -4,6 +4,7 @@ import { getRecipe } from '../redux/actions';
 import RecipeStep from "./RecipeStep";
 import s from './RecipeDetail.module.css'
 import notFoundImg from '../images/sad-food.jpg'
+import { useRouteMatch } from 'react-router-dom';
 
 const RecipeDetail = (props) => {
 
@@ -11,7 +12,9 @@ const RecipeDetail = (props) => {
 
     const recipeData = useSelector(state => state.recipe);
 
-    useEffect(() => dispatch(getRecipe(props.match.params.id)), []);
+    const match = useRouteMatch();
+
+    useEffect(() => dispatch(getRecipe(match.params.id)), []);
 
     const steps = recipeData.hasOwnProperty("analyzedInstructions") && recipeData.analyzedInstructions.length ? recipeData.analyzedInstructions[0].steps : recipeData.steps || [];
 
