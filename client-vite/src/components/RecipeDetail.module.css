@@ -17,11 +17,11 @@
 .summary {
     max-width: 600px;
     margin: auto;
+    text-align: left;
 }
 
 .steps {
     text-align: left;
-    padding-left: 20px;
 }
 
 .polaroid {
