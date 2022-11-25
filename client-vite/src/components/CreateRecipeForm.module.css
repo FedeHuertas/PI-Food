@@ -1,36 +1,36 @@
 .container {
-    background-image: url('../images/paper.webp');
+    background-image: url('/src/images/paper.webp');
     width: 600px;
     margin: auto;
-    margin-bottom: 150px;
-    margin-top: 150px;
-    padding-bottom: 20px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    padding-bottom: 40px;
     padding-left: 180px;
-    padding-top: 150px;
+    padding-top: 140px;
     background-repeat: repeat-y;
     text-align: left;
-    color: rgb(13, 0, 172);
+    color: darkblue;
     font-family: 'Segoe Script';
 }
 
 .input{
     font-size: larger;
-    color: rgb(13, 0, 172);
+    color: darkblue;
     outline: none;
     padding: 5px;
     border-radius: 5px;
     border: none;
     border-bottom: solid 3px;
     border-right: solid 2px;
-    border-color: blue;
+    border-color: darkblue;
+    width: 500px;
 }
 
 .filtersContainer {
-    display: flex;
-    margin: auto;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    max-width: 550px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: initial;
+    max-width: 600px;
     font-size: larger;
 }
 
@@ -74,8 +74,33 @@
     width: 70px;
     height: 50px;
     background-color: grey;
-    border: 2px solid darkslategrey;
+    border: 2px solid darkblue;
     color: white;
     border-radius: 5px;
-    box-shadow: 5px 5px darkslategrey;
+    box-shadow: 5px 5px #00008bbd;
+}
+
+@media (max-width: 520px) {
+    .container {
+        max-width: 70%;
+        margin: auto;
+        margin-top: 15px;
+        padding: 20px;
+        padding-top: 10px;
+        padding-left: 80px;
+        background-size: contain;
+        background-repeat: repeat-y;
+        text-align: left;
+        color: darkblue;
+        font-family: 'Segoe Script';
+    }
+
+    .input {
+        width: 200px;
+    }
+
+    .filtersContainer {
+        grid-template-columns: repeat(2, 1fr);
+        font-size: small;
+    }
 }

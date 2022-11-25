@@ -87,19 +87,19 @@ const CreateRecipeForm = () => {
             <h2>Crear Recetas</h2>
 
             <h3>Titulo: </h3>
-            <input name="title" size="50" onChange={handleInputChange} className={s.input } /><br/>
+            <input name="title" onChange={handleInputChange} className={s.input } /><br/>
             {errors.title && <span className={s.dangerText}>❗{errors.title}</span>}<br/>
 
             <h3>Resumen: </h3>
-            <textarea rows="4" cols="50" name="summary" onChange={handleInputChange} className={ s.input } /><br/>
+            <input rows="4" cols="50" name="summary" onChange={handleInputChange} className={ s.input } /><br/>
             {errors.summary && <span className={s.dangerText}>❗{errors.summary}</span>}<br/>
 
-            <h3>Puntos de Salud: </h3>
-            <input type="float" name="healthScore" size="2" onChange={handleInputChange} placeholder={"%"} className={ s.input} />
+            <h3 style={{display:"inline"}} >{"Puntos de Salud:    "}
+            <input type="float" name="healthScore" style={{width:"10%"}} onChange={handleInputChange}  className={ s.input} />{"   %"}</h3><br/>
             {errors.healthScore && <span className={s.dangerText}>❗{errors.healthScore}</span>}<br/>
 
             <h3>Imagen: </h3>
-            <input size="30" name="image" className={s.input} onChange={handleInputChange} placeholder="ingrese una url" /><br/>
+            <input name="image" className={s.input} onChange={handleInputChange} placeholder="ingrese una url" /><br/>
 
             <h4>Tipos de dieta: </h4>
             <div className={s.filtersContainer} >
@@ -114,13 +114,13 @@ const CreateRecipeForm = () => {
             <h3>Pasos: </h3>
 
             <h4>{recipe.steps.length+1}° Paso: </h4>
-            <textarea rows="4" cols="50" type="text" name="step" className={s.input} onChange={handleStepChange} value={step.step} /><br/>
+            <input rows="4" cols="50" type="text" name="step" className={s.input} onChange={handleStepChange} value={step.step} /><br/>
 
             <h4>Ingredientes: </h4>
-            <input size="50" name="ingredients" className={s.input} onChange={handleStepChange} value={step.ingredients} /><br/>
+            <input name="ingredients" className={s.input} onChange={handleStepChange} value={step.ingredients} /><br/>
 
             <h4>Equipo Necesario: </h4>
-            <input size="50" name="equipment" className={s.input} onChange={handleStepChange} value={step.equipment} /><br/>
+            <input name="equipment" className={s.input} onChange={handleStepChange} value={step.equipment} /><br/>
             
             <div className={s.buttonContainer} >
                 <button className={s.buttons} onClick={handleAddStep}>Agregar Paso</button>
