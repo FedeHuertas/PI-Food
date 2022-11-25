@@ -10,8 +10,13 @@
 .container {
     background-color: rgba(245, 245, 245, 0.9);
     height: 250px;
-    width: 550px;
+    max-width: 550px;
     margin: auto;
     padding: 5px;
-    padding-top: 30px;
+}
+
+@media (max-width: 520px) {
+    .container {
+        max-width: 380px;
+    }
 }
