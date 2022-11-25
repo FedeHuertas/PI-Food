@@ -1,7 +1,7 @@
 import './App.css';
 import { Route, Routes } from "react-router-dom";
 import CreateRecipe from './pages/CreateRecipe';
-import RecipeDetail from './components/RecipeDetail';
+import RecipeId from './pages/RecipeId';
 import Landing from './components/Landing';
 import Home from './pages/Home';
 
@@ -17,7 +17,7 @@ function App() {
 
         <Route exact path="/create" element={<CreateRecipe />} />
 
-        <Route exact path="/recipeDetail/:id" element={<RecipeDetail />} />
+        <Route exact path="/recipeDetail/:id" element={<RecipeId />} />
       </Routes>
       </div>
     </div>
