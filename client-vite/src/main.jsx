@@ -6,10 +6,12 @@ import './index.css';
 import store from './redux/store';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import axios from 'axios';
+import axios from 'axios'
 
-axios.defaults.baseURL = 'https://pi-food-production-cd82.up.railway.app/'
+axios.defaults.baseURL = import.meta.env.MODE === "Production" ? import.meta.env.BASE_URL : import.meta.env.VITE_BASE_URL;
 //axios.defaults.baseURL = 'http://127.0.0.1:3001/'
+
+console.log(axios.defaults.baseURL)
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
